@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(219, 219, 219);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.actionsNavigation button {
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  margin: 10px 5px 0 10px;
+  border-radius: 4px;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.actionsNavigation button:hover {
+  filter: contrast(150%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addButton {
+  background-color: rgb(66, 219, 66);
+}
+
+.deleteAllButton {
+  background-color: rgb(252, 66, 66);
+}
+
+.notesArea {
+  max-width: 100%;
+  margin: 20px 10px 0 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.note {
+  width: 250px;
+  height: 230px;
+  background-color: rgba(221, 201, 20, 0.336);
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.noteTitle {
+  margin: 5px 0 0 10px;
+  font-size: 19px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.noteText {
+  margin: 5px 10px 0 10px;
+  width: 230px;
+  height: 150px;
+  outline: none;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  resize: none;
+  overflow: auto;
+  font-size: 17px;
+}
+
+.noteActions {
+  padding-inline-start: 0;
+  margin-left: 10px;
+  margin-top: 0px;
+}
+
+.noteActions li {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
 }

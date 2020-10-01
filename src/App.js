@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
+//Imported components
+import Actions from './components/Actions';
+import NotesArea from './components/NotesArea';
+
 function App() {
+  //States
+  const [notesList, setNotes] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Actions notesList={notesList} setNotes={setNotes} />
+      <NotesArea notesList={notesList} setNotes={setNotes} />
     </div>
   );
 }
